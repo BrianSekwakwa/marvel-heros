@@ -1,11 +1,16 @@
-import React from "react";
+import React, { Component } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <div>Hello World!</div>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <h1>Marvel Heros</h1>
+        <HeroForm />
+        <HeroDescription />
+        <HeroComics />
+      </div>
+    );
+  }
 }
 
 export default App;
