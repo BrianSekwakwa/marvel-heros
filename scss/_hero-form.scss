@@ -1,0 +1,57 @@
+.hero-form {
+  margin-top: 2rem;
+
+  & input {
+    height: 2rem;
+    padding-left: 0.5rem;
+    border: none;
+    border-bottom: 2px solid #000;
+    background: transparent;
+    text-align: center;
+    color: #000;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
+
+    @include verySmall {
+      font-size: 1rem;
+    }
+
+    &::placeholder {
+      color: #000;
+      opacity: 0.6;
+      font-size: 0.9rem;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+      color: $primary-color;
+
+      &::placeholder {
+        color: $primary-color;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+
+  & button {
+    height: 2rem;
+    margin-left: 0.5rem;
+    width: 7rem;
+    cursor: pointer;
+    border: 2px solid #000;
+    background: transparent;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      border-color: $primary-color;
+      color: $primary-color;
+    }
+
+    @include verySmall {
+      // font-size: 2rem;
+    }
+  }
+}

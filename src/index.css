@@ -1,2 +1,71 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif; }
+
 body {
-  background: green; }
+  text-align: center;
+  background: url("/img/background.jpg");
+  background-color: rgba(255, 255, 255, 0.3);
+  background-blend-mode: color;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.hero-header__title {
+  font-size: 3rem;
+  margin-top: 2rem;
+  text-shadow: 0px 0px 5px #f8cd64; }
+  @media screen and (max-width: 575.98px) {
+    .hero-header__title {
+      font-size: 2rem; } }
+
+.hero-header__lead {
+  margin-top: 0.3rem;
+  font-size: 1.2rem; }
+  @media screen and (max-width: 575.98px) {
+    .hero-header__lead {
+      font-size: 0.9rem; } }
+
+.hero-form {
+  margin-top: 2rem; }
+  .hero-form input {
+    height: 2rem;
+    padding-left: 0.5rem;
+    border: none;
+    border-bottom: 2px solid #000;
+    background: transparent;
+    text-align: center;
+    color: #000;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in-out; }
+    @media screen and (max-width: 575.98px) {
+      .hero-form input {
+        font-size: 1rem; } }
+    .hero-form input::placeholder {
+      color: #000;
+      opacity: 0.6;
+      font-size: 0.9rem;
+      transition: all 0.3s ease-in-out; }
+    .hero-form input:focus {
+      outline: none;
+      border-color: #f8cd64;
+      color: #f8cd64; }
+      .hero-form input:focus::placeholder {
+        color: #f8cd64;
+        transition: all 0.3s ease-in-out; }
+  .hero-form button {
+    height: 2rem;
+    margin-left: 0.5rem;
+    width: 7rem;
+    cursor: pointer;
+    border: 2px solid #000;
+    background: transparent;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out; }
+    .hero-form button:hover {
+      border-color: #f8cd64;
+      color: #f8cd64; }

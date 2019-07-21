@@ -17,13 +17,13 @@ class HeroForm extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <form className="hero-form" onSubmit={this.handleSubmit}>
           <input
             type="text"
-            placeholder="Enter the marvel hero's name"
+            placeholder="ENTER HERO'S NAME"
             onChange={this.handleChange}
           />
-          <button type="submit">Search Hero</button>
+          <button type="submit">SEARCH HERO</button>
         </form>
       </div>
     );
