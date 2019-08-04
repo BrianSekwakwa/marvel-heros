@@ -16,14 +16,15 @@ class HeroForm extends Component {
   };
   render() {
     return (
-      <div>
-        <form className="hero-form" onSubmit={this.handleSubmit}>
+      <div className="hero-search">
+        <p className="hero-search__title"> MARVEL HEROS</p>
+        <form className="hero-search__form" onSubmit={this.handleSubmit}>
           <input
             type="text"
             placeholder="ENTER HERO'S NAME"
             onChange={this.handleChange}
           />
-          <button type="submit">SEARCH HERO</button>
+          <button type="submit">SEARCH</button>
         </form>
       </div>
     );
