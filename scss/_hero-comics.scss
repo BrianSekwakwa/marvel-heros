@@ -1,0 +1,32 @@
+.hero-comics {
+  background: brown;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+
+  &__title {
+    padding-left: 2rem;
+    font-weight: bold;
+  }
+
+  &__comics {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    padding: 0 2rem;
+
+    @include small {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include medium {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__item {
+      background: yellow;
+      height: 20rem;
+      border: 2px solid #000;
+    }
+  }
+}

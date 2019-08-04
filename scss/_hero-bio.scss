@@ -1,0 +1,29 @@
+.hero-bio {
+  background: green;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  margin-top: 3rem;
+  padding: 0 2rem;
+
+  @include small {
+    grid-template-columns: repeat(2, 1fr);
+    height: 20rem;
+  }
+
+  @include medium {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  &__image {
+    background: pink;
+    height: 20rem;
+    border: 2px solid #000;
+  }
+
+  &__content {
+    background: orangered;
+    height: 20rem;
+    border: 2px solid #000;
+  }
+}

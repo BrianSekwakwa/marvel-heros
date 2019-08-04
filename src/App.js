@@ -10,8 +10,8 @@ class App extends Component {
       <div className="App">
         <Header />
         <HeroForm />
-        {/* <HeroDescription />
-        <HeroComics /> */}
+        <HeroDescription />
+        <HeroComics />
       </div>
     );
   }

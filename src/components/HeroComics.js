@@ -2,8 +2,34 @@ import React from "react";
 
 function HeroComics() {
   return (
-    <div>
-      <div>A bunch of heros comics will go here;</div>
+    <div className="hero-comics">
+      <span className="hero-comics__title">HERO NAME + COMICS</span>
+      <div className="hero-comics__comics">
+        <div className="hero-comics__comics__item">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At odit, rem
+          unde nemo eligendi ratione.
+        </div>
+        <div className="hero-comics__comics__item">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At odit, rem
+          unde nemo eligendi ratione.
+        </div>
+        <div className="hero-comics__comics__item">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At odit, rem
+          unde nemo eligendi ratione.
+        </div>
+        <div className="hero-comics__comics__item">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At odit, rem
+          unde nemo eligendi ratione.
+        </div>
+        <div className="hero-comics__comics__item">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At odit, rem
+          unde nemo eligendi ratione.
+        </div>
+        <div className="hero-comics__comics__item">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At odit, rem
+          unde nemo eligendi ratione.
+        </div>
+      </div>
     </div>
   );
 }

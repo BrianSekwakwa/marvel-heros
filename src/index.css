@@ -6,7 +6,7 @@
   font-family: "Roboto", sans-serif; }
 
 .App {
-  max-width: 85.375rem;
+  max-width: 75rem;
   margin: 0 auto; }
 
 .header {
@@ -67,3 +67,50 @@
       border: 2px solid #000000;
       border-radius: 5px;
       background-color: transparent; }
+
+.hero-bio {
+  background: green;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  margin-top: 3rem;
+  padding: 0 2rem; }
+  @media screen and (min-width: 576px) {
+    .hero-bio {
+      grid-template-columns: repeat(2, 1fr);
+      height: 20rem; } }
+  @media screen and (min-width: 768px) {
+    .hero-bio {
+      grid-template-columns: 1fr 2fr; } }
+  .hero-bio__image {
+    background: pink;
+    height: 20rem;
+    border: 2px solid #000; }
+  .hero-bio__content {
+    background: orangered;
+    height: 20rem;
+    border: 2px solid #000; }
+
+.hero-comics {
+  background: brown;
+  margin-top: 2rem;
+  padding-bottom: 2rem; }
+  .hero-comics__title {
+    padding-left: 2rem;
+    font-weight: bold; }
+  .hero-comics__comics {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    padding: 0 2rem; }
+    @media screen and (min-width: 576px) {
+      .hero-comics__comics {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media screen and (min-width: 768px) {
+      .hero-comics__comics {
+        grid-template-columns: repeat(3, 1fr); } }
+    .hero-comics__comics__item {
+      background: yellow;
+      height: 20rem;
+      border: 2px solid #000; }
