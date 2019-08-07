@@ -1,18 +1,21 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { searchHero } from "../store/actions/searchHeroAction";
 
 class HeroForm extends Component {
   state = {
-    heroName: null,
-    heroResults: null
+    heroName: null
   };
 
   handleChange = e => {
-    console.log(e.target.value);
+    this.setState({
+      heroName: e.target.value
+    });
   };
 
   handleSubmit = e => {
-    console.log(this.state.heroResults);
     e.preventDefault();
+    this.props.searchHero(this.state.heroName);
   };
   render() {
     return (
@@ -31,4 +34,16 @@ class HeroForm extends Component {
   }
 }
 
-export default HeroForm;
+const mapDispatchToProps = dispatch => {
+  return {
+    searchHero: heroName => {
+      console.log(heroName);
+      dispatch(searchHero(heroName));
+    }
+  };
+};
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(HeroForm);
