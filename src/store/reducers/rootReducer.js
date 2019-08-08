@@ -1,17 +1,19 @@
 const initState = {
-  firstName: "Brian",
-  lastName: "Sekwakwa",
-  age: 24,
-  isMale: true
+  heroData: null,
+  heroComics: null
 };
 
 const rootReducer = (state = initState, action) => {
   switch (action.type) {
-    case "LOADED":
-      console.log("The content was loaded", action.heroName);
-      return state;
-    case "NOT_LOADED":
-      console.log("The content was NOT loaded");
+    case "HERO_LOADED":
+      // Setting the data from the search hero action to the application state
+      return {
+        ...state,
+        heroData: action.hero.heroData,
+        heroComics: action.hero.heroComics
+      };
+    case "ERROR":
+      alert("Could not fetch data \n", action.err);
       return state;
     default:
       return state;

@@ -37,7 +37,6 @@ class HeroForm extends Component {
 const mapDispatchToProps = dispatch => {
   return {
     searchHero: heroName => {
-      console.log(heroName);
       dispatch(searchHero(heroName));
     }
   };
