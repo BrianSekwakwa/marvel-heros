@@ -89,7 +89,20 @@
   .hero-bio__content {
     background: orangered;
     height: 20rem;
-    border: 2px solid #000; }
+    border: 2px solid #000;
+    padding: 1rem 0.5rem 0rem 0.5rem; }
+    .hero-bio__content__title {
+      font-weight: bold;
+      font-size: 2rem; }
+    .hero-bio__content__description {
+      margin-top: 2rem; }
+    .hero-bio__content__button {
+      margin-top: 2rem;
+      padding: 0.5rem;
+      border: 2px solid #000;
+      border-radius: 5px;
+      background: transparent;
+      cursor: pointer; }
 
 .hero-comics {
   background: brown;
