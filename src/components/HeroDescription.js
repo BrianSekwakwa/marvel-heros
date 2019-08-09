@@ -2,22 +2,29 @@ import React from "react";
 import { connect } from "react-redux";
 
 function HeroDescription(props) {
+  // Checking to see if the props are not empty
   if (props.heroData) {
-    
+    // destructuring and getting relevant data from the props
+    const { comics, description, name, thumbnail, urls } = props.heroData;
     return (
       <div className="hero-bio">
         <div className="hero-bio__image">
-          The heros description will go here once we fetch the data from the api
+          <img
+            src={`${thumbnail.path}.${thumbnail.extension}`}
+            alt="hero thumbnail"
+          />
         </div>
         <div className="hero-bio__content">
-          <span className="hero-bio__content__title">Hero Title</span>
-          <p className="hero-bio__content__description">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio
-            voluptas rem tempora iusto laudantium enim aliquid reiciendis
-            dignissimos laboriosam, debitis culpa iure est exercitationem
-            fugiat, dolorem hic maiores, saepe autem.
+          <span className="hero-bio__content__title">{name}</span>
+          <p className="hero-bio__content__description">{description}</p>
+          <p className="hero-bio__content__collection">
+            <span>
+              Comics: <span>{comics.available}</span>
+            </span>
           </p>
-          <button className="hero-bio__content__button">Learn More</button>
+          <a href={urls[1].url} target="_blank" rel="noopener noreferrer">
+            <button className="hero-bio__content__button">Learn More</button>
+          </a>
         </div>
       </div>
     );
@@ -26,6 +33,7 @@ function HeroDescription(props) {
   }
 }
 
+// Mapping the state from the store to the props
 const mapStateToProps = state => {
   return {
     heroData: state.heroData
