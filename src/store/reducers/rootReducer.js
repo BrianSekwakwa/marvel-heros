@@ -1,3 +1,4 @@
+// initial state to pass into the reducer
 const initState = {
   heroData: null,
   heroComics: null

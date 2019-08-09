@@ -120,7 +120,8 @@
   padding-bottom: 2rem; }
   .hero-comics__title {
     padding-left: 2rem;
-    font-weight: bold; }
+    font-weight: bold;
+    font-size: 1.3rem; }
   .hero-comics__comics {
     margin-top: 2rem;
     display: grid;
@@ -135,5 +136,8 @@
         grid-template-columns: repeat(3, 1fr); } }
     .hero-comics__comics__item {
       background: yellow;
-      height: 20rem;
+      height: 23rem;
       border: 2px solid #000; }
+      .hero-comics__comics__item img {
+        width: 100%;
+        height: 100%; }

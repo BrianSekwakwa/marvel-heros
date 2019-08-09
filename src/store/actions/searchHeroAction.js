@@ -15,7 +15,7 @@ export const searchHero = heroName => {
   return (dispatch, getState) => {
     // Fetching the hero data by name
     fetch(
-      `http://gateway.marvel.com/v1/public/characters?name=thor&limit=1&ts=${ts}&apikey=${publicKey}&hash=${hash}`
+      `http://gateway.marvel.com/v1/public/characters?name=${heroName}&limit=1&ts=${ts}&apikey=${publicKey}&hash=${hash}`
     )
       .then(res => res.json())
       .then(heroData => {
@@ -23,7 +23,7 @@ export const searchHero = heroName => {
 
         //Fetching the Hero comics by its hero id
         fetch(
-          `http://gateway.marvel.com/v1/public/characters/${heroId}/comics?limit=6&ts=${ts}&apikey=${publicKey}&hash=${hash}`
+          `http://gateway.marvel.com/v1/public/characters/${heroId}/comics?limit=9&ts=${ts}&apikey=${publicKey}&hash=${hash}`
         )
           .then(res => res.json())
           .then(heroComics => {
@@ -45,9 +45,3 @@ export const searchHero = heroName => {
       });
   };
 };
-
-// http://gateway.marvel.com/v1/public/comics?ts=1&apikey=1234&hash=ffd275c5130566a2916217b101f26150
-
-// https://gateway.marvel.com:443/v1/public/characters?name=thor&limit=1&apikey=776d8bd43b57caf9997ca8cc2c29ef7d
-
-// https://gateway.marvel.com:443/v1/public/characters/1009664/comics?apikey=776d8bd43b57caf9997ca8cc2c29ef7d

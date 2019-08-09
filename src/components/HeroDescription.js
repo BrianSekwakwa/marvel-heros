@@ -22,7 +22,7 @@ function HeroDescription(props) {
               Comics: <span>{comics.available}</span>
             </span>
           </p>
-          <a href={urls[1].url} target="_blank" rel="noopener noreferrer">
+          <a href={urls[0].url} target="_blank" rel="noopener noreferrer">
             <button className="hero-bio__content__button">Learn More</button>
           </a>
         </div>
