@@ -25,9 +25,29 @@
     }
 
     &__item {
-      background: yellow;
+      background: #000;
       height: 23rem;
       border: 2px solid #000;
+
+      &:hover {
+        & p {
+          visibility: visible;
+          font-weight: bold;
+        }
+
+        & img {
+          opacity: 0.3;
+        }
+      }
+
+      & p {
+        position: absolute;
+        color: yellow;
+        margin-top: 11.5rem;
+        margin-left: 1rem;
+        width: 11.5rem;
+        visibility: hidden;
+      }
 
       & img {
         width: 100%;

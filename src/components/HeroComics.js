@@ -11,21 +11,17 @@ function HeroComics(props) {
         <div className="hero-comics__comics">
           {/* Looping through the comics data */}
           {props.heroComics.map(comic => {
-            const { id, thumbnail, urls } = comic;
+            const { id, thumbnail, urls, title } = comic;
             return (
-              <a
-                href={urls[0].url}
-                target="_blank"
-                rel="noopener noreferrer"
-                key={id}
-              >
-                <div className="hero-comics__comics__item">
+              <div key={id} className="hero-comics__comics__item">
+                <p>{title}</p>
+                <a href={urls[0].url} target="_blank" rel="noopener noreferrer">
                   <img
                     src={`${thumbnail.path}.${thumbnail.extension}`}
                     alt="comic thumbnail"
                   />
-                </div>
-              </a>
+                </a>
+              </div>
             );
           })}
         </div>
