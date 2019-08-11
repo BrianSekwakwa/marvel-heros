@@ -7,6 +7,15 @@ const authAPIKeys = {
 };
 
 export const searchHero = heroName => {
+  // Formatting the hero name string
+  if (heroName.includes("spider")) {
+    // Putting a hyphen in white spaces for spider class heros
+    heroName = heroName.trim().replace(/[^A-Z0-9]+/gi, "-");
+  } else {
+    // Putting a %20 in white spaces for other heros
+    heroName = heroName.trim().replace(/[^A-Z0-9]+/gi, "%20");
+  }
+
   // Authentication
   const { publicKey, privateKey } = authAPIKeys;
   let ts = Date.now().toString();

@@ -1,10 +1,16 @@
 .header {
-  background: red;
   height: 11rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background: url("/img/Image.jpg");
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  background-blend-mode: color;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
 
   &__title {
     font-size: 2.7rem;
@@ -21,5 +27,10 @@
     @include verySmall {
       font-size: 1.05rem;
     }
+  }
+
+  &__image {
+    position: absolute;
+    width: 100%;
   }
 }

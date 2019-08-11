@@ -5,7 +5,15 @@ function HeroDescription(props) {
   // Checking to see if the props are not empty
   if (props.heroData) {
     // destructuring and getting relevant data from the props
-    const { comics, description, name, thumbnail, urls } = props.heroData;
+    const { comics, name, thumbnail, urls } = props.heroData;
+    let { description } = props.heroData;
+
+    // checking to see if the description from the api is empty to output a different message
+
+    if (description === "") {
+      description = "Character does not have a description";
+    }
+
     return (
       <div className="hero-bio">
         <div className="hero-bio__image">
