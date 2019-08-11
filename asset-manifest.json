@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.3fea461b.chunk.css",
-    "main.js": "/static/js/main.f720edbb.chunk.js",
-    "main.js.map": "/static/js/main.f720edbb.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.10eab176.chunk.js": "/static/js/2.10eab176.chunk.js",
-    "static/js/2.10eab176.chunk.js.map": "/static/js/2.10eab176.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.cb500bc81199caaab51b1ce6c9b98c1e.js": "/precache-manifest.cb500bc81199caaab51b1ce6c9b98c1e.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.3fea461b.chunk.css.map": "/static/css/main.3fea461b.chunk.css.map",
-    "static/media/loader.gif": "/static/media/loader.de199010.gif"
+    "main.css": "/marvel-heros/static/css/main.e66cb1de.chunk.css",
+    "main.js": "/marvel-heros/static/js/main.c2fbad5c.chunk.js",
+    "main.js.map": "/marvel-heros/static/js/main.c2fbad5c.chunk.js.map",
+    "runtime~main.js": "/marvel-heros/static/js/runtime~main.4733523f.js",
+    "runtime~main.js.map": "/marvel-heros/static/js/runtime~main.4733523f.js.map",
+    "static/js/2.10eab176.chunk.js": "/marvel-heros/static/js/2.10eab176.chunk.js",
+    "static/js/2.10eab176.chunk.js.map": "/marvel-heros/static/js/2.10eab176.chunk.js.map",
+    "index.html": "/marvel-heros/index.html",
+    "precache-manifest.84fe205416706e7fb37592fe1fea5b84.js": "/marvel-heros/precache-manifest.84fe205416706e7fb37592fe1fea5b84.js",
+    "service-worker.js": "/marvel-heros/service-worker.js",
+    "static/css/main.e66cb1de.chunk.css.map": "/marvel-heros/static/css/main.e66cb1de.chunk.css.map",
+    "static/media/index.css": "/marvel-heros/static/media/Image.37cff925.jpg",
+    "static/media/loader.gif": "/marvel-heros/static/media/loader.de199010.gif"
   }
 }
