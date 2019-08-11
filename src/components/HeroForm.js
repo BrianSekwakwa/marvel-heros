@@ -13,6 +13,10 @@ class HeroForm extends Component {
     });
   };
 
+  handleClick = e => {
+    e.target.value = null;
+  };
+
   handleSubmit = e => {
     e.preventDefault();
     this.props.searchHero(this.state.heroName);
@@ -24,8 +28,9 @@ class HeroForm extends Component {
         <form className="hero-search__form" onSubmit={this.handleSubmit}>
           <input
             type="text"
-            placeholder="ENTER HERO'S NAME"
+            placeholder="Enter hero name: Eg. thor"
             onChange={this.handleChange}
+            onClick={this.handleClick}
           />
           <button type="submit">SEARCH</button>
         </form>

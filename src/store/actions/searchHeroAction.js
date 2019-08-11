@@ -22,35 +22,48 @@ export const searchHero = heroName => {
   let hash = md5(ts + privateKey + publicKey);
 
   return (dispatch, getState) => {
-    // Fetching the hero data by name
-    fetch(
-      `http://gateway.marvel.com/v1/public/characters?name=${heroName}&limit=1&ts=${ts}&apikey=${publicKey}&hash=${hash}`
-    )
-      .then(res => res.json())
-      .then(heroData => {
-        let heroId = heroData.data.results[0].id;
+    // Dispatching action to show the hero description and comics loading
+    dispatch({
+      type: "HERO_LOADING",
+      isLoading: true
+    });
 
-        //Fetching the Hero comics by its hero id
-        fetch(
-          `http://gateway.marvel.com/v1/public/characters/${heroId}/comics?limit=9&ts=${ts}&apikey=${publicKey}&hash=${hash}`
-        )
-          .then(res => res.json())
-          .then(heroComics => {
-            // Passing the data from the API to the Reducer
-            dispatch({
-              type: "HERO_LOADED",
-              hero: {
-                heroData: heroData.data.results[0],
-                heroComics: heroComics.data.results
-              }
+    setTimeout(() => {
+      // Fetching the hero data by name
+      fetch(
+        `http://gateway.marvel.com/v1/public/characters?name=${heroName}&limit=1&ts=${ts}&apikey=${publicKey}&hash=${hash}`
+      )
+        .then(res => res.json())
+        .then(heroData => {
+          let heroId = heroData.data.results[0].id;
+
+          //Fetching the Hero comics by its hero id
+          fetch(
+            `http://gateway.marvel.com/v1/public/characters/${heroId}/comics?limit=9&ts=${ts}&apikey=${publicKey}&hash=${hash}`
+          )
+            .then(res => res.json())
+            .then(heroComics => {
+              // Passing the data from the API to the Reducer
+              dispatch({
+                type: "HERO_LOADED",
+                hero: {
+                  heroData: heroData.data.results[0],
+                  heroComics: heroComics.data.results,
+                  isLoading: false
+                }
+              });
+            })
+            .catch(err => {
+              // passing an error if failed to fetch hero comics
+              dispatch({ type: "ERROR", err: err });
+              dispatch({ type: "HERO_ERROR_LOADING", isLoading: false });
             });
-          })
-          .catch(err => {
-            dispatch({ type: "ERROR", err: err });
-          });
-      })
-      .catch(err => {
-        dispatch({ type: "ERROR", err: err });
-      });
+        })
+        .catch(err => {
+          // passing an error if failed to fetch hero by name
+          dispatch({ type: "ERROR", err: err });
+          dispatch({ type: "HERO_ERROR_LOADING", isLoading: false });
+        });
+    }, 1000);
   };
 };
