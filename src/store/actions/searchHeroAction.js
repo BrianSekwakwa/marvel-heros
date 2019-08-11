@@ -2,8 +2,8 @@ let md5 = require("md5");
 
 // Keys from the marvel API for authentication
 const authAPIKeys = {
-  publicKey: "776d8bd43b57caf9997ca8cc2c29ef7d",
-  privateKey: "35aa7e075a342cb5b5728ddb6223073ab0c52d8a"
+  publicKey: /* Public Key goes here */ null,
+  privateKey: /* Private Key goes here */ null
 };
 
 export const searchHero = heroName => {
