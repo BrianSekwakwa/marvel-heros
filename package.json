@@ -12,7 +12,7 @@
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0"
   },
-  "homepage": "https://briansekwakwa.github.io/marvel-heros",
+  "homepage": "https://briansekwakwa.github.io/marvel-heros/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

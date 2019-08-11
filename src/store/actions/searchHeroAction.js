@@ -31,7 +31,7 @@ export const searchHero = heroName => {
     setTimeout(() => {
       // Fetching the hero data by name
       fetch(
-        `http://gateway.marvel.com/v1/public/characters?name=${heroName}&limit=1&ts=${ts}&apikey=${publicKey}&hash=${hash}`
+        `https://gateway.marvel.com/v1/public/characters?name=${heroName}&limit=1&ts=${ts}&apikey=${publicKey}&hash=${hash}`
       )
         .then(res => res.json())
         .then(heroData => {
@@ -39,7 +39,7 @@ export const searchHero = heroName => {
 
           //Fetching the Hero comics by its hero id
           fetch(
-            `http://gateway.marvel.com/v1/public/characters/${heroId}/comics?limit=9&ts=${ts}&apikey=${publicKey}&hash=${hash}`
+            `https://gateway.marvel.com/v1/public/characters/${heroId}/comics?limit=9&ts=${ts}&apikey=${publicKey}&hash=${hash}`
           )
             .then(res => res.json())
             .then(heroComics => {
